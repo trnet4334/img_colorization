@@ -31,7 +31,7 @@ validation_split = 0.1
 
 # Paths
 img_input_path = "./fruitdata/"
-img_output_path = "./predict_output_auto_encoder/"
+img_output_path = "./predict_output_auto_encoder_shallow/"
 img_reconstructed_path = "./reconstructed_input_after_bining/"
 img_channels_path = "./channels_img/"
 
@@ -155,38 +155,6 @@ model.add(Activation('relu'))
 model.add(Conv2D(40, 3, border_mode='same'))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
-
-model.add(Conv2D(80, 3, border_mode='same'))
-model.add(Activation('relu'))
-model.add(Conv2D(80, 3, border_mode='same'))
-model.add(Activation('relu'))
-model.add(Conv2D(80, 3, border_mode='same'))
-model.add(Activation('relu'))
-model.add(MaxPooling2D(pool_size=(2, 2)))
-
-model.add(Conv2D(160, 3, border_mode='same'))
-model.add(Activation('relu'))
-model.add(Conv2D(160, 3, border_mode='same'))
-model.add(Activation('relu'))
-model.add(Conv2D(160, 3, border_mode='same'))
-model.add(Activation('relu'))
-model.add(MaxPooling2D(pool_size=(2, 2)))
-
-model.add(Conv2D(160, 3, border_mode='same'))
-model.add(Activation('relu'))
-model.add(Conv2D(160, 3, border_mode='same'))
-model.add(Activation('relu'))
-model.add(Conv2D(160, 3, border_mode='same'))
-model.add(Activation('relu'))
-model.add(UpSampling2D((2, 2)))
-
-model.add(Conv2D(80, 3, border_mode='same'))
-model.add(Activation('relu'))
-model.add(Conv2D(80, 3, border_mode='same'))
-model.add(Activation('relu'))
-model.add(Conv2D(80, 3, border_mode='same'))
-model.add(Activation('relu'))
-model.add(UpSampling2D((2, 2)))
 
 model.add(Conv2D(40, 3, border_mode='same'))
 model.add(Activation('relu'))
