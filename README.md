@@ -1,1 +1,53 @@
 # img_colorization
+
+== Notes ==
+Note1 : Some architectures need very large memory
+(We used AWS EC2 P2 instance that has 61 GB memory to do the experiments)
+
+Note2 : Our results can be view from google drive:
+https://drive.google.com/drive/folders/0B4AcBPBEA54aMldCUEprcGlHNFk?usp=sharing
+
+Execution time : Run at least 30 minutes (1 hour for some larger architecture) for each code
+
+Results : View the result image in corresponding folder namde predict_output_(architecture)
+
+== Dependencies ==
+OS: Ubuntu 16.04
+Software: python 
+Deep learning framework: Theano, Keras
+Dependencies: openCV
+
+== Dataset Download Links: ==
+Since we rearranged the dataset, we uploaded the dataset to the following links
+
+1.fruitdata : https://drive.google.com/drive/folders/0B4AcBPBEA54adFZ2VWpaZkhscWM?usp=sharing
+
+2.combined : https://drive.google.com/open?id=0B4AcBPBEA54aZy1VeGtaam55VWs
+
+After download the dataset, fruitdata should be put into the fruit_colorizer folder,
+and combined should be put into landscape_colorizer folder
+
+
+
+== Run Code ==
+1.For training and doing predicting for Fruit dataset:
+$ cd fruit_colorizer
+
+$ colorization_auto_encoder.py             # Use deep auto-encoder architecture 
+$ colorization_auto_encoder_shallow.py     # Use shallow auto-encoder architecture 
+
+
+2.For training and doing predicting for Open Country(Landscape) dataset:
+$ cd landscape_colorizer
+
+$ python colorization_use_pretrained_conv_layers.py          # Use our pre-trained conv-layer and Dense layer.
+                                                             # This is our baseline model
+
+$ python colorization_concate_pretrained_conv_layers.py      # Use concat conv layer architecture
+$ python colorization_auto_encoder.py                        # Use auto-encoder architecture
+$ python colorization_use_vgg.py                             # Use vgg as feature extractor
+$ python colorization_use_concate_vgg.py                     # Use concat vgg conv layers architecture
+
+3. For comparison between color images and gray scale images testing on a VGG-16 fine-tuned network. The result shows loss and accuracy.
+$ cd comparison
+$ python vgg16_cifar_RGB_gray_comparison.py
