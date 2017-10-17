@@ -5,7 +5,7 @@ Note1 : Some architectures need very large memory
 (We used AWS EC2 P2 instance that has 61 GB memory to do the experiments)
 
 Note2 : Our results can be view from google drive:
-https://drive.google.com/drive/folders/0B4AcBPBEA54aMldCUEprcGlHNFk?usp=sharing
+https://drive.google.com/open?id=0BzxDU3VAcOkQck9rYThkd3JmQVE
 
 Execution time : Run at least 30 minutes (1 hour for some larger architecture) for each code
 
@@ -20,9 +20,9 @@ Dependencies: openCV
 == Dataset Download Links: ==
 Since we rearranged the dataset, we uploaded the dataset to the following links
 
-1.fruitdata : https://drive.google.com/drive/folders/0B4AcBPBEA54adFZ2VWpaZkhscWM?usp=sharing
+1.fruitdata : https://drive.google.com/open?id=0BzxDU3VAcOkQUVRhTlJ6SXlIYnc
 
-2.combined : https://drive.google.com/open?id=0B4AcBPBEA54aZy1VeGtaam55VWs
+2.combined : https://drive.google.com/open?id=0BzxDU3VAcOkQTnpmZjA2aGszWGM
 
 After download the dataset, fruitdata should be put into the fruit_colorizer folder,
 and combined should be put into landscape_colorizer folder
