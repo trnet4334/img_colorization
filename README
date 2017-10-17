@@ -1,3 +1,5 @@
+#Image Colorization
+
 == Notes ==
 Note1 : Some architectures need very large memory
 (We used AWS EC2 P2 instance that has 61 GB memory to do the experiments)
