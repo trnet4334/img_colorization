@@ -1,6 +1,7 @@
 # img_colorization
 
 == Notes ==
+
 Note1 : Some architectures need very large memory
 (We used AWS EC2 P2 instance that has 61 GB memory to do the experiments)
 
@@ -12,12 +13,14 @@ Execution time : Run at least 30 minutes (1 hour for some larger architecture) f
 Results : View the result image in corresponding folder namde predict_output_(architecture)
 
 == Dependencies ==
+
 OS: Ubuntu 16.04
 Software: python 
 Deep learning framework: Theano, Keras
 Dependencies: openCV
 
 == Dataset Download Links: ==
+
 Since we rearranged the dataset, we uploaded the dataset to the following links
 
 1.fruitdata : https://drive.google.com/drive/folders/0B4AcBPBEA54adFZ2VWpaZkhscWM?usp=sharing
@@ -30,6 +33,7 @@ and combined should be put into landscape_colorizer folder
 
 
 == Run Code ==
+
 1.For training and doing predicting for Fruit dataset:
 $ cd fruit_colorizer
 
